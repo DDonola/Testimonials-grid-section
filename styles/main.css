@@ -1,0 +1,123 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 255px);
+    grid-template-rows: auto auto;
+    gap: 24px 30px;
+    grid-template-areas:
+       "item1 item1 item2 item3"
+       "item4 item5 item5 item3";
+}
+
+div.card {
+    padding: 24px 32px 26px 32px;
+    border-radius: 8px;
+
+    & div {
+        display: flex;
+        align-items: center;
+        
+        & div {
+            display: block;
+            & span {
+                display: block;
+            }
+        
+            & span.verified {
+                font: var(--verified);
+            }
+        }
+
+        & img {
+            margin-right: 15px;
+            width: 28px;
+            height: 28px;
+            border-radius: 100%;
+        }
+    }
+
+    & h1 {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font: var(--emphasis);
+    }
+}
+
+div.card:nth-child(1) {
+    background-color: var(--moderate-violet);
+    grid-area: item1;
+
+    background-repeat: no-repeat;
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-position: left 82% bottom 100%;
+
+    & img {
+        outline: 2px solid hsla(210, 46%, 95%, 0.5);
+    }
+
+    & span.verified {
+        opacity: 0.5;
+    }
+
+    p {
+        opacity: 0.5;
+    }
+}
+
+div.card:nth-child(2) {
+    background-color: var(--very-dark-grayish-blue);
+    grid-area: item2;
+
+    
+    & span.verified {
+        opacity: 0.5;
+    }
+
+    p {
+        opacity: 0.7;
+    }
+}
+
+div.card:nth-child(3) {
+    background-color: var(--white);
+    grid-area: item3;
+    color: var(--very-dark-grayish-blue);
+
+    & span.verified {
+        opacity: 0.5;
+    }
+
+    p {
+        opacity: 0.7;
+    }
+}
+
+div.card:nth-child(4) {
+    background-color: var(--white);
+    grid-area: item4;
+    color: var(--very-dark-grayish-blue);
+
+    & span.verified {
+        opacity: 0.5;
+    }
+    
+    & p {
+        opacity: 0.7;
+    }
+}
+
+div.card:nth-child(5) {
+    background-color: var(--very-dark-blackish-blue);
+    grid-area: item5;
+
+    & img {
+        outline: 2px solid hsl(263, 55%, 52%, 0.7);
+    }
+
+    & span.verified {
+        opacity: 0.5;
+    }
+
+    p {
+        opacity: 0.5;
+    }
+}

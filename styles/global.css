@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+
+    --ff: "Barlow Semi Condensed", sans-serif;
+    --text: 500 13px/18px var(--ff);
+    --verified: 500 11px var(--ff);
+    --emphasis: 600 20px/24px var(--ff);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font: var(--text);
+    color: var(--white);
+    background-color: var(--light-grayish-blue);
+}
